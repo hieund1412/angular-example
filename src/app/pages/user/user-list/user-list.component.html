@@ -1,0 +1,63 @@
+<h2>Thêm mới người dùng</h2>
+<form nz-form class="ant-advanced-search-form">
+  <div nz-row [nzGutter]="24">
+    <div nz-col [nzSpan]="8">
+      <nz-form-item>
+        <nz-form-label>Username </nz-form-label>
+        <nz-form-control>
+          <input nz-input placeholder="placeholder" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label>Password </nz-form-label>
+        <nz-form-control>
+          <input nz-input placeholder="placeholder" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label>First name </nz-form-label>
+        <nz-form-control>
+          <input nz-input placeholder="placeholder" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label>Last name </nz-form-label>
+        <nz-form-control>
+          <input nz-input placeholder="placeholder" />
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <div nz-row>
+    <div nz-col [nzSpan]="24" class="search-area">
+      <button nz-button [nzType]="'primary'">Thêm mới</button>
+    </div>
+  </div>
+</form>
+
+<div>
+  <h1>Danh sách User</h1>
+</div>
+
+<nz-table #basicTable>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Address</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of users">
+      <td>{{ data.username }}</td>
+      <td>{{ data.firstName }}</td>
+      <td>{{ data.lastName }}</td>
+      <td>
+        <a>Action 一 {{ data.id }}</a>
+        <!-- <nz-divider nzType="vertical"></nz-divider> -->
+        <a>Delete</a>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>
